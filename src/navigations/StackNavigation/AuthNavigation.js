@@ -3,8 +3,6 @@ import OnBoarding from '../../screens/auth/OnBoarding';
 import Owner from '../../screens/auth/Owner';
 import Jober from '../../screens/auth/Jober';
 import Customer from '../../screens/auth/Customer';
-import Home from '../../screens/home/Customer/Home';
-import BottomNavigation from '../BottomNavigation';
 const AuthNavigation = () => {
   const Stack = createStackNavigator();
   return (
@@ -15,6 +13,11 @@ const AuthNavigation = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
+        name="Customer"
+        component={Customer}
+        options={{headerShown: true}}
+      />
+      <Stack.Screen
         name="Owner"
         component={Owner}
         options={{title: 'Shop Owner'}}
@@ -23,16 +26,6 @@ const AuthNavigation = () => {
         name="Jober"
         component={Jober}
         options={{headerShown: true}}
-      />
-      <Stack.Screen
-        name="Customer"
-        component={Customer}
-        options={{headerShown: true}}
-      />
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

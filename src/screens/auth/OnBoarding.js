@@ -1,10 +1,10 @@
 import {TouchableOpacity, View, StyleSheet} from 'react-native';
 import {Text} from '../../components/inputs';
+import {Layout} from '../../components/UI';
 const OnBoarding = ({navigation}) => {
   return (
-    <View
+    <Layout
       style={{
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -30,7 +30,7 @@ const OnBoarding = ({navigation}) => {
           />
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate('Home')}>
+            onPress={() => navigation.navigate('Customer')}>
             <Text
               size="large"
               title="Customer"
@@ -57,7 +57,7 @@ const OnBoarding = ({navigation}) => {
           />
         </TouchableOpacity>
       </View>
-    </View>
+    </Layout>
   );
 };
 

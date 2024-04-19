@@ -1,13 +1,16 @@
 import {SafeAreaView, ScrollView, View} from 'react-native';
 
-const Layout = ({children}) => {
+const Layout = ({children, padding = false, style}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <ScrollView
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           flexGrow: 1,
           backgroundColor: '#ffffff',
-          // paddingHorizontal: 8,
+          paddingHorizontal: padding ? 8 : 0,
+
+          ...style,
         }}>
         {children}
       </ScrollView>

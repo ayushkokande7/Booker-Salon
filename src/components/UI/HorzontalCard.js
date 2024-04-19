@@ -3,7 +3,7 @@ import React from 'react';
 import {Text} from '../inputs';
 import Micon from 'react-native-vector-icons/MaterialIcons';
 import Miconi from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import {windowWidth} from '../../utils/Dimentions';
 import colors from '../../utils/Theme';
 const HorzontalCard = () => {
   return (
@@ -60,9 +60,11 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#ffffff',
     borderRadius: 20,
-
+    width: windowWidth(75),
+    marginHorizontal: 10,
     elevation: 3,
     overflow: 'hidden',
+    marginBottom: 5,
   },
 });
 export default HorzontalCard;

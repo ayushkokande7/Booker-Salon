@@ -2,10 +2,16 @@ import {View} from 'react-native';
 import {useRef} from 'react';
 import {Button, Text, TextInput} from '../../components/inputs';
 import {Layout} from '../../components/UI';
+import {useDispatch} from 'react-redux';
+import {setUserLogin} from '../../redux/slices/InitialSlice';
 const Owner = () => {
   const nameInputRef = useRef();
+  const dispatch = useDispatch();
+  const handleSubmit = () => {
+    dispatch(setUserLogin({userType: 'owner', user: {name: 'Ankit'}}));
+  };
   return (
-    <Layout>
+    <Layout padding>
       <Text
         size="large"
         title="Please Log in/Sign up"
@@ -13,6 +19,15 @@ const Owner = () => {
       />
       <View style={{flex: 1, justifyContent: 'space-between'}}>
         <View>
+          <TextInput
+            label="Shop ID"
+            inputRef={nameInputRef}
+            style={{
+              borderTopRightRadius: 50,
+              borderBottomRightRadius: 50,
+              marginBottom: 15,
+            }}
+          />
           <TextInput
             label="Name"
             inputRef={nameInputRef}
@@ -64,7 +79,7 @@ const Owner = () => {
         </View>
         <View style={{marginBottom: 10}}>
           <Text size="large" title="Log in/Sign up" />
-          <Button title="Log in" />
+          <Button title="Log in" onPress={handleSubmit} />
         </View>
       </View>
     </Layout>

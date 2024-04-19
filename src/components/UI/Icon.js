@@ -14,8 +14,8 @@ const Icon = ({data}) => {
           borderWidth: 3,
           padding: 5,
           borderRadius: 50,
-          width: 90,
-          height: 90,
+          width: 80,
+          height: 80,
         }}>
         <Image
           source={data.img}
@@ -28,7 +28,7 @@ const Icon = ({data}) => {
       </View>
       <Text
         size="medium"
-        title={data.name}
+        title={data?.name}
         style={{marginTop: 5, textAlign: 'center'}}
       />
     </View>

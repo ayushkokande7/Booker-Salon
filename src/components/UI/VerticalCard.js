@@ -3,6 +3,7 @@ import {Text} from '../inputs';
 import Micon from 'react-native-vector-icons/MaterialIcons';
 import Miconi from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../utils/Theme';
+import {windowWidth} from '../../utils/Dimentions';
 const VerticalCard = () => {
   return (
     <View style={styles.card}>
@@ -70,7 +71,9 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#ffffff',
     borderRadius: 20,
-    width: '100%',
+    width: windowWidth(94),
+    marginBottom: 10,
+    alignSelf: 'center',
     elevation: 3,
     flexDirection: 'row',
     gap: 10,

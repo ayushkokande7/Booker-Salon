@@ -1,7 +1,8 @@
 import {View, Image} from 'react-native';
 import React from 'react';
 import {Text} from '../inputs';
-import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Micon from 'react-native-vector-icons/MaterialIcons';
+import colors from '../../utils/Theme';
 const UserHeader = () => {
   return (
     <View
@@ -12,18 +13,33 @@ const UserHeader = () => {
         alignItems: 'center',
         margin: 8,
       }}>
-      <View style={{flexDirection: 'row', alignItems: 'center', gap: 5}}>
-        <Image
-          source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
-          style={{width: 55, height: 55, borderRadius: 50}}
-        />
+      <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
+        <View
+          style={{
+            borderColor: '#0866f4',
+            borderWidth: 3,
+            padding: 3,
+            borderRadius: 50,
+            width: 67,
+            height: 67,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image
+            source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
+            style={{width: '100%', height: '100%', borderRadius: 50}}
+          />
+        </View>
         <View>
-          <Text size="medium" title="Ankit" />
-          <Text size="medium" title="Rz 45/333, new delhi" noOfLine={1} />
+          <Text size="large" title="Ankit" />
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Micon name="location-pin" size={20} color={colors.iconFocus} />
+            <Text size="medium" title="Rz 45/333, new delhi" noOfLine={1} />
+          </View>
         </View>
       </View>
       <View>
-        <Micon name="bell" size={25} />
+        <Micon name="notifications" size={30} />
       </View>
     </View>
   );

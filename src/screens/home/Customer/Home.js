@@ -1,15 +1,17 @@
 import React from 'react';
 import {Layout} from '../../../components/UI';
 import {UserHeader, HeroSection} from '../../../components/UI';
-import NearByShop from '../../../components/Layout/NearByShop';
+import FlatList from '../../../components/Layout/FlatList';
 import Categories from '../../../components/Layout/Categories';
+import {HorzontalCard, VerticalCard} from '../../../components/UI';
 const Home = () => {
   return (
     <Layout>
       <UserHeader />
       <HeroSection />
       <Categories />
-      {/* <NearByShop /> */}
+      <FlatList name="Nearby Shops" comp={<HorzontalCard />} horizontal />
+      <FlatList name="Popular Jobers" comp={<VerticalCard />} />
     </Layout>
   );
 };
