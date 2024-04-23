@@ -4,6 +4,15 @@ import Home from '../../screens/home/Customer/Home';
 import Shops from '../../screens/home/Customer/Shops';
 import Profile from '../../screens/home/Customer/Profile';
 import Booking from '../../screens/home/Customer/Booking';
+import EditProfile from '../../screens/home/Customer/Profile/EditProfile';
+import BookingHistory from '../../screens/home/Customer/Profile/BookingHistory';
+import PaymentMethod from '../../screens/home/Customer/Profile/PaymentMethod';
+import Favorites from '../../screens/home/Customer/Profile/Favorites';
+import GetNotifications from '../../screens/home/Customer/Profile/GetNotifications';
+import Support from '../../screens/home/Customer/Profile/Support';
+import Settings from '../../screens/home/Customer/Profile/Settings';
+import AboutUs from '../../screens/home/Customer/Profile/AboutUs';
+import PrivacyPolicy from '../../screens/home/Customer/Profile/PrivacyPolicy';
 const CustomerNavigation = () => {
   const Stack = createStackNavigator();
   const Tabs = [
@@ -13,17 +22,17 @@ const CustomerNavigation = () => {
       component: Home,
     },
     {
-      icon: 'star',
+      icon: 'storefront',
       label: 'Shops',
       component: Shops,
     },
     {
-      icon: 'star',
+      icon: 'calendar-month',
       label: 'Booking',
       component: Booking,
     },
     {
-      icon: 'star',
+      icon: 'account',
       label: 'Profile',
       component: Profile,
     },
@@ -35,6 +44,51 @@ const CustomerNavigation = () => {
         component={BottomNavigation}
         initialParams={{Tabs}}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
+        options={{title: 'Edit Profile'}}
+      />
+      <Stack.Screen
+        name="MyBookingHistory"
+        component={BookingHistory}
+        options={{title: 'Booking History'}}
+      />
+      <Stack.Screen
+        name="PaymentMethod"
+        component={PaymentMethod}
+        options={{title: 'Payment Method'}}
+      />
+      <Stack.Screen
+        name="Favorites"
+        component={Favorites}
+        options={{title: 'Favorite'}}
+      />
+      <Stack.Screen
+        name="GetNotification"
+        component={GetNotifications}
+        options={{title: 'Notification'}}
+      />
+      <Stack.Screen
+        name="PrivacyPolicy"
+        component={PrivacyPolicy}
+        options={{title: 'Privacy Policy'}}
+      />
+      <Stack.Screen
+        name="Support"
+        component={Support}
+        options={{title: 'Support'}}
+      />
+      <Stack.Screen
+        name="Settings"
+        component={Settings}
+        options={{title: 'Settings'}}
+      />
+      <Stack.Screen
+        name="AboutUs"
+        component={AboutUs}
+        options={{title: 'About Us'}}
       />
     </Stack.Navigator>
   );

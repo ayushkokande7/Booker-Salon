@@ -12,11 +12,9 @@ const Owner = () => {
   };
   return (
     <Layout padding>
-      <Text
-        size="large"
-        title="Please Log in/Sign up"
-        style={{alignSelf: 'center'}}
-      />
+      <Text size="large" style={{alignSelf: 'center'}}>
+        Please Log in/Sign up
+      </Text>
       <View style={{flex: 1, justifyContent: 'space-between'}}>
         <View>
           <TextInput
@@ -70,15 +68,13 @@ const Owner = () => {
               </View>
               <Button title="Verify" style={{width: 100}} />
             </View>
-            <Text
-              size="medium"
-              title="Didn't receive the OTP?"
-              style={{color: 'blue'}}
-            />
+            <Text size="medium" style={{color: 'blue'}}>
+              Didn't receive the OTP?
+            </Text>
           </View>
         </View>
         <View style={{marginBottom: 10}}>
-          <Text size="large" title="Log in/Sign up" />
+          <Text size="large">Log in/Sign up</Text>
           <Button title="Log in" onPress={handleSubmit} />
         </View>
       </View>

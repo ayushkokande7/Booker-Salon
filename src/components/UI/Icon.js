@@ -26,11 +26,9 @@ const Icon = ({data}) => {
           }}
         />
       </View>
-      <Text
-        size="medium"
-        title={data?.name}
-        style={{marginTop: 5, textAlign: 'center'}}
-      />
+      <Text size="medium" style={{marginTop: 5, textAlign: 'center'}}>
+        {data?.name}
+      </Text>
     </View>
   );
 };

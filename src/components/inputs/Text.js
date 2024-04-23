@@ -1,7 +1,7 @@
 import {Text} from 'react-native';
 import React from 'react';
 
-const TextComponent = ({size, title, style, noOfLine}) => {
+const TextComponent = ({size, style, noOfLine, children}) => {
   let Tsize;
   if (size === 'large') {
     Tsize = 20;
@@ -14,7 +14,7 @@ const TextComponent = ({size, title, style, noOfLine}) => {
     <Text
       numberOfLines={noOfLine}
       style={[{fontSize: Tsize, color: 'black'}, style]}>
-      {title}
+      {children}
     </Text>
   );
 };

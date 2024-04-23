@@ -17,26 +17,23 @@ const HorzontalCard = () => {
       <View style={{padding: 10}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{flexDirection: 'row', gap: 3, alignItems: 'center'}}>
-            <Text
-              size="large"
-              title="Ankit Budhori"
-              style={{fontWeight: 'bold'}}
-            />
+            <Text size="large" style={{fontWeight: 'bold'}}>
+              Ankit Kumar
+            </Text>
             <Micon name="verified" size={25} color={colors.primary} />
           </View>
           <View style={{flexDirection: 'row', gap: 3, alignItems: 'center'}}>
             <Miconi name="arrow-left-right" size={25} color={colors.primary} />
-            <Text size="medium" title="5 Km" />
+            <Text size="medium">5 Km</Text>
           </View>
         </View>
         <View
           style={{flexDirection: 'row', alignItems: 'center', marginTop: 3}}>
           <Micon name="location-pin" size={23} color={colors.iconFocus} />
-          <Text
-            size="medium"
-            title="Rz 45/333, new delhi 45/333, new delhi 45/333, new delhi 45/333, new delhi 45/333, new delhi 45/333, new delhi"
-            noOfLine={1}
-          />
+          <Text size="medium" noOfLine={1}>
+            Rz 45/333, new delhi 45/333, new delhi 45/333, new delhi 45/333, new
+            delhi 45/333, new delhi 45/333, new delhi
+          </Text>
         </View>
         <View
           style={{
@@ -47,8 +44,10 @@ const HorzontalCard = () => {
           }}>
           <Miconi name="star" size={25} color={colors.yellow} />
           <View style={{flexDirection: 'row', gap: 3, alignItems: 'center'}}>
-            <Text size="medium" title="4.5" style={{fontWeight: 'bold'}} />
-            <Text size="medium" title="(36)" />
+            <Text size="medium" style={{fontWeight: 'bold'}}>
+              4.5
+            </Text>
+            <Text size="medium">(36)</Text>
           </View>
         </View>
       </View>

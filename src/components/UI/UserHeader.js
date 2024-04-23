@@ -31,10 +31,12 @@ const UserHeader = () => {
           />
         </View>
         <View>
-          <Text size="large" title="Ankit" />
+          <Text size="large">Ankit</Text>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Micon name="location-pin" size={20} color={colors.iconFocus} />
-            <Text size="medium" title="Rz 45/333, new delhi" noOfLine={1} />
+            <Text size="medium" noOfLine={1}>
+              Rz 45/333, new delhi
+            </Text>
           </View>
         </View>
       </View>

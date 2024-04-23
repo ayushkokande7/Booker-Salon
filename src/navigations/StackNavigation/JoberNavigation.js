@@ -10,12 +10,12 @@ const JoberNavigation = () => {
       component: Home,
     },
     {
-      icon: 'star',
+      icon: 'calculator',
       label: 'Calculation',
       component: Calculation,
     },
     {
-      icon: 'star',
+      icon: 'account',
       label: 'Profile',
       component: Profile,
     },

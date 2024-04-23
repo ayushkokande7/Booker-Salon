@@ -4,7 +4,7 @@ import {Text} from '../../components/inputs';
 const MyTextInput = ({label, inputRef, style}) => {
   return (
     <View>
-      <Text size="large" title={label} />
+      <Text size="large">{label}</Text>
       <TextInput
         ref={inputRef}
         onChangeText={text => (inputRef.current.value = text)}

@@ -1,12 +1,9 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import {Layout} from '../../../components/UI';
 
 const Calculation = () => {
-  return (
-    <View>
-      <Text>Calculation</Text>
-    </View>
-  );
+  return <Layout></Layout>;
 };
 
 export default Calculation;

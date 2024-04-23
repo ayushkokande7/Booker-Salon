@@ -12,8 +12,10 @@ const Categories = () => {
           justifyContent: 'space-between',
           paddingHorizontal: 10,
         }}>
-        <Text size="large" title="Categories" style={{fontWeight: 'bold'}} />
-        <Text size="medium" title="View all" />
+        <Text size="large" style={{fontWeight: 'bold'}}>
+          Categories
+        </Text>
+        <Text size="medium">View All </Text>
       </View>
       <FlatList
         data={Caterogy}

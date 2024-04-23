@@ -10,13 +10,12 @@ const OnBoarding = ({navigation}) => {
         justifyContent: 'space-between',
       }}>
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text title="Booker Salon" style={{fontSize: 40, fontWeight: 'bold'}} />
+        <Text style={{fontSize: 40, fontWeight: 'bold'}}>Booker Salon</Text>
       </View>
       <View style={{justifyContent: 'space-evenly', flex: 1.5}}>
         <View>
           <Text
             size="medium"
-            title="User Type"
             style={{
               fontWeight: 'bold',
               alignSelf: 'center',
@@ -26,35 +25,30 @@ const OnBoarding = ({navigation}) => {
               paddingVertical: 3,
               borderRadius: 50,
               marginBottom: 30,
-            }}
-          />
+            }}>
+            User Type
+          </Text>
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigation.navigate('Customer')}>
-            <Text
-              size="large"
-              title="Customer"
-              style={{color: 'white', fontWeight: 'bold'}}
-            />
+            <Text size="large" style={{color: 'white', fontWeight: 'bold'}}>
+              Customer
+            </Text>
           </TouchableOpacity>
         </View>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('Owner')}>
-          <Text
-            size="large"
-            title="Owner"
-            style={{color: 'white', fontWeight: 'bold'}}
-          />
+          <Text size="large" style={{color: 'white', fontWeight: 'bold'}}>
+            Owner
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('Jober')}>
-          <Text
-            size="large"
-            title="Jober"
-            style={{color: 'white', fontWeight: 'bold'}}
-          />
+          <Text size="large" style={{color: 'white', fontWeight: 'bold'}}>
+            Jober
+          </Text>
         </TouchableOpacity>
       </View>
     </Layout>

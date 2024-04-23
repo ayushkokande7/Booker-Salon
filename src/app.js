@@ -5,6 +5,7 @@ import CustomerNavigation from './navigations/StackNavigation/CustomerNavigation
 import OwnerNavigation from './navigations/StackNavigation/OwnerNavigation';
 import JoberNavigation from './navigations/StackNavigation/JoberNavigation';
 import {useSelector} from 'react-redux';
+import Alert from './components/Layout/Alert';
 const App = () => {
   const {userType} = useSelector(state => state.initial);
   const renderNavigation = () => {
@@ -25,6 +26,7 @@ const App = () => {
     <>
       <StatusBar barStyle={'dark-content'} backgroundColor="#ffffffff" />
       <NavigationContainer>{renderNavigation()}</NavigationContainer>
+      <Alert />
     </>
   );
 };
