@@ -3,16 +3,17 @@ import {View, TextInput} from 'react-native';
 import {Text} from '../../components/inputs';
 const MyTextInput = ({label, inputRef, style}) => {
   return (
-    <View>
+    <View style={{marginBottom: 10}}>
       <Text size="large">{label}</Text>
       <TextInput
         ref={inputRef}
         onChangeText={text => (inputRef.current.value = text)}
         style={{
           backgroundColor: '#3DCEB8',
-          padding: 15,
+          padding: 12,
           fontSize: 17,
           ...style,
+          elevation: 3,
         }}
       />
     </View>

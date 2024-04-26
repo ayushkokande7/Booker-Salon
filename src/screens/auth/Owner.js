@@ -23,7 +23,6 @@ const Owner = () => {
             style={{
               borderTopRightRadius: 50,
               borderBottomRightRadius: 50,
-              marginBottom: 15,
             }}
           />
           <TextInput
@@ -32,14 +31,12 @@ const Owner = () => {
             style={{
               borderTopRightRadius: 50,
               borderBottomRightRadius: 50,
-              marginBottom: 15,
             }}
           />
           <View
             style={{
               flexDirection: 'row',
               alignItems: 'flex-end',
-              marginBottom: 15,
             }}>
             <View style={{flex: 1}}>
               <TextInput

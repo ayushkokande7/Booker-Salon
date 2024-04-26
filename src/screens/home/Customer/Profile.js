@@ -38,6 +38,7 @@ const Profile = ({navigation}) => {
           borderTopLeftRadius: 50,
           borderTopRightRadius: 50,
           padding: 20,
+          flex: 1,
           elevation: 5,
         }}>
         <ProfileCard

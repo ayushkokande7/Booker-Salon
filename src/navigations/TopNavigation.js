@@ -5,7 +5,7 @@ export default function TopNavigation({tabs}) {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: 'white',
-        tabBarInactiveTintColor: 'red',
+        tabBarInactiveTintColor: '#c6c6c6',
         tabBarLabelStyle: {
           fontSize: 17,
           fontWeight: 'bold',
@@ -13,10 +13,10 @@ export default function TopNavigation({tabs}) {
         },
         tabBarStyle: {
           backgroundColor: 'blue',
-          elevation: 3,
         },
+
         tabBarIndicatorStyle: {
-          backgroundColor: 'red',
+          backgroundColor: '#f4125d',
           height: 3,
         },
       }}>

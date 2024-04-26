@@ -1,6 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import BottomNavigation from '../BottomNavigation';
 import {Home, Profile, Calculation} from '../../screens/home/Jober';
+import SetTime from '../../screens/home/Jober/SetTime';
 const JoberNavigation = () => {
   const Stack = createStackNavigator();
   const Tabs = [
@@ -27,6 +28,11 @@ const JoberNavigation = () => {
         component={BottomNavigation}
         initialParams={{Tabs}}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SetTime"
+        component={SetTime}
+        options={{title: 'Set Time'}}
       />
     </Stack.Navigator>
   );

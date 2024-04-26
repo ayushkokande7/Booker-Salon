@@ -13,6 +13,9 @@ import Support from '../../screens/home/Customer/Profile/Support';
 import Settings from '../../screens/home/Customer/Profile/Settings';
 import AboutUs from '../../screens/home/Customer/Profile/AboutUs';
 import PrivacyPolicy from '../../screens/home/Customer/Profile/PrivacyPolicy';
+import Shop from '../../screens/home/Customer/Shop';
+import JoberDetails from '../../screens/home/Customer/Shop/JoberDetails';
+import ScheduleBooking from '../../screens/home/Customer/Shop/ScheduleBooking';
 const CustomerNavigation = () => {
   const Stack = createStackNavigator();
   const Tabs = [
@@ -49,6 +52,14 @@ const CustomerNavigation = () => {
         name="EditProfile"
         component={EditProfile}
         options={{title: 'Edit Profile'}}
+      />
+      <Stack.Screen
+        name="Shop"
+        component={Shop}
+        options={{
+          title: null,
+          headerTransparent: true,
+        }}
       />
       <Stack.Screen
         name="MyBookingHistory"
@@ -89,6 +100,16 @@ const CustomerNavigation = () => {
         name="AboutUs"
         component={AboutUs}
         options={{title: 'About Us'}}
+      />
+      <Stack.Screen
+        name="JoberDetails"
+        component={JoberDetails}
+        options={{title: 'JObber Details'}}
+      />
+      <Stack.Screen
+        name="ScheduleBooking"
+        component={ScheduleBooking}
+        options={{title: 'Schedule Booking'}}
       />
     </Stack.Navigator>
   );
