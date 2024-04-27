@@ -57,7 +57,7 @@ const Profile = ({navigation}) => {
           icon="content-cut"
           title="Add Services"
           color="#5fadf2"
-          onPress={() => navigation.navigate('AddService')}
+          onPress={() => navigation.navigate('Service')}
         />
         <ProfileCard
           icon="shield-alert"

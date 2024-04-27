@@ -12,11 +12,31 @@ const Home = ({navigation}) => {
           }}
           style={{width: '100%', height: 200}}
         />
-        <Text
-          size="medium"
-          style={{position: 'absolute', bottom: 5, right: 5, color: 'white'}}>
-          Shop ID- SP001
-        </Text>
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            flexDirection: 'row',
+            width: '100%',
+            padding: 2,
+            justifyContent: 'space-between',
+            backgroundColor: '#aba8a8',
+          }}>
+          <Text
+            size="large"
+            style={{
+              fontWeight: 'bold',
+            }}>
+            Shop Name
+          </Text>
+          <Text
+            size="large"
+            style={{
+              fontWeight: 'bold',
+            }}>
+            Shop ID- SP001
+          </Text>
+        </View>
       </View>
       <View style={{margin: 10, flex: 1}}>
         <Button
@@ -49,7 +69,7 @@ const Home = ({navigation}) => {
             <Text size="medium">Live</Text>
           </View>
           <TouchableOpacity
-            onPress={() => navigation.navigate('JoberDetails')}
+            onPress={() => navigation.navigate('Jober')}
             style={{
               flexDirection: 'row',
               alignItems: 'center',

@@ -4,7 +4,7 @@ import IconRound from '../../../../components/UI/IconRound';
 import {Layout} from '../../../../components/UI';
 const EditShop = () => {
   return (
-    <Layout padding>
+    <Layout>
       <View>
         <Image
           source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}

@@ -1,10 +1,11 @@
-import {View, Image} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Text from '../inputs/Text';
 
-const PricingCard = () => {
+const PricingCard = ({onPress}) => {
   return (
-    <View
+    <TouchableOpacity
+      onPress={onPress}
       style={{
         flexDirection: 'row',
         alignItems: 'center',
@@ -21,7 +22,7 @@ const PricingCard = () => {
       />
       <Text size="large">Haircut</Text>
       <Text size="large">$20</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
