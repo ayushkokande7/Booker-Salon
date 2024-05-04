@@ -8,7 +8,7 @@ const BookingCard = () => {
         alignItems: 'center',
         marginVertical: 10,
         backgroundColor: 'white',
-        elevation: 3,
+        elevation: 5,
         borderRadius: 10,
         padding: 10,
         justifyContent: 'space-between',
@@ -23,17 +23,17 @@ const BookingCard = () => {
         <Text size="medium">ID: SP001</Text>
       </View>
       <View style={{alignItems: 'center'}}>
-        <Text size="medium">Time</Text>
-        <Text size="medium">1:30 PM</Text>
+        <Text size="small">Time</Text>
+        <Text size="small">1:30 PM</Text>
       </View>
       <View style={{alignItems: 'center'}}>
-        <Text size="medium">Estimated Time</Text>
-        <Text size="medium">1:30 PM</Text>
+        <Text size="small">Estimated Time</Text>
+        <Text size="small">1:30 PM</Text>
       </View>
       <View
         style={{
-          width: 30,
-          height: 30,
+          width: 20,
+          height: 20,
           backgroundColor: '#0af70a',
           borderRadius: 50,
         }}

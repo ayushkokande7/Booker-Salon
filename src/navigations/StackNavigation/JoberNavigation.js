@@ -2,6 +2,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import BottomNavigation from '../BottomNavigation';
 import {Home, Profile, Calculation} from '../../screens/home/Jober';
 import SetTime from '../../screens/home/Jober/SetTime';
+import EditProfile from '../../screens/home/Owner/Profile/EditProfile';
 const JoberNavigation = () => {
   const Stack = createStackNavigator();
   const Tabs = [
@@ -12,7 +13,7 @@ const JoberNavigation = () => {
     },
     {
       icon: 'calculator',
-      label: 'Calculation',
+      label: 'calc',
       component: Calculation,
     },
     {
@@ -33,6 +34,11 @@ const JoberNavigation = () => {
         name="SetTime"
         component={SetTime}
         options={{title: 'Set Time'}}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
+        options={{title: 'Edit Profile'}}
       />
     </Stack.Navigator>
   );

@@ -3,6 +3,7 @@ import React from 'react';
 import {Text} from '../inputs';
 import Micon from 'react-native-vector-icons/MaterialIcons';
 import colors from '../../utils/Theme';
+import IconRound from './IconRound';
 const UserHeader = () => {
   return (
     <View
@@ -32,7 +33,12 @@ const UserHeader = () => {
         </View>
         <View>
           <Text size="large">Ankit</Text>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginLeft: -5,
+            }}>
             <Micon name="location-pin" size={20} color={colors.iconFocus} />
             <Text size="medium" noOfLine={1}>
               Rz 45/333, new delhi
@@ -40,9 +46,7 @@ const UserHeader = () => {
           </View>
         </View>
       </View>
-      <View>
-        <Micon name="notifications" size={30} />
-      </View>
+      <IconRound icon="bell" size={25} />
     </View>
   );
 };

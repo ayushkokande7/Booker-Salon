@@ -11,9 +11,8 @@ const Booking = () => {
         style={{
           width: '100%',
           height: 60,
-          padding: 1,
           paddingTop: 10,
-          backgroundColor: '#3030e6ff',
+          backgroundColor: '#1a6fee',
           flexDirection: 'row',
         }}>
         <TouchableOpacity
@@ -65,9 +64,7 @@ const Booking = () => {
           </Text>
         </TouchableOpacity>
       </View>
-      <View>
-        <FlatListComponent Comp={<VerticalCard />} />
-      </View>
+      <FlatListComponent Comp={<VerticalCard />} />
     </View>
   );
 };

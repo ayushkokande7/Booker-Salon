@@ -11,10 +11,12 @@ const AllBookings = () => {
       <Button
         onPress={() => navigation.navigate('ScheduleBooking')}
         title="Schedule Your Booking"
+        icon="account-clock-outline"
         style={{
           position: 'absolute',
           bottom: 0,
           alignSelf: 'center',
+          width: '100%',
           padding: 10,
         }}
       />

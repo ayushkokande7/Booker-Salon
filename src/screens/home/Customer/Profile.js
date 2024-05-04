@@ -25,7 +25,7 @@ const Profile = ({navigation}) => {
         }}>
         <Image
           source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
-          style={{width: 80, height: 80, borderRadius: 50}}
+          style={{width: 100, height: 100, borderRadius: 50}}
         />
         <Text size="large" style={{fontWeight: 'bold'}}>
           Ankit Budhori

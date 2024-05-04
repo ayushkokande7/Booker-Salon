@@ -25,8 +25,10 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle={'dark-content'} backgroundColor="#ffffffff" />
-      <NavigationContainer>{renderNavigation()}</NavigationContainer>
-      <Alert />
+      <NavigationContainer>
+        {renderNavigation()}
+        <Alert />
+      </NavigationContainer>
     </>
   );
 };

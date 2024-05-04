@@ -16,6 +16,7 @@ import PrivacyPolicy from '../../screens/home/Customer/Profile/PrivacyPolicy';
 import Shop from '../../screens/home/Customer/Shop';
 import JoberDetails from '../../screens/home/Customer/Shop/JoberDetails';
 import ScheduleBooking from '../../screens/home/Customer/Shop/ScheduleBooking';
+import Nearby from '../../screens/home/Customer/Shop/Nearby';
 const CustomerNavigation = () => {
   const Stack = createStackNavigator();
   const Tabs = [
@@ -25,12 +26,13 @@ const CustomerNavigation = () => {
       component: Home,
     },
     {
-      icon: 'storefront',
+      icon: 'store',
       label: 'Shops',
       component: Shops,
     },
     {
-      icon: 'calendar-month',
+      icon: 'calendar-number-sharp',
+      i: true,
       label: 'Booking',
       component: Booking,
     },
@@ -57,8 +59,7 @@ const CustomerNavigation = () => {
         name="Shop"
         component={Shop}
         options={{
-          title: null,
-          headerTransparent: true,
+          headerShown: false,
         }}
       />
       <Stack.Screen
@@ -104,12 +105,17 @@ const CustomerNavigation = () => {
       <Stack.Screen
         name="JoberDetails"
         component={JoberDetails}
-        options={{title: 'JObber Details'}}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="ScheduleBooking"
         component={ScheduleBooking}
-        options={{title: 'Schedule Booking'}}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Nearby"
+        component={Nearby}
+        options={{title: 'Nearby'}}
       />
     </Stack.Navigator>
   );

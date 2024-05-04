@@ -1,12 +1,14 @@
 import {View, Image, TouchableOpacity} from 'react-native';
 import {Text} from '../inputs';
-
+import {useNavigation} from '@react-navigation/native';
 const Icon = ({data}) => {
+  const navigation = useNavigation();
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => navigation.navigate('Nearby')}
       style={{
         alignItems: 'center',
-        width: 105,
+        width: 100,
       }}>
       <View
         style={{
@@ -29,7 +31,7 @@ const Icon = ({data}) => {
       <Text size="medium" style={{marginTop: 5, textAlign: 'center'}}>
         {data?.name}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

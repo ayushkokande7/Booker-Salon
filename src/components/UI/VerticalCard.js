@@ -4,21 +4,27 @@ import Micon from 'react-native-vector-icons/MaterialIcons';
 import Miconi from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../utils/Theme';
 import {windowWidth} from '../../utils/Dimentions';
+import IconRound from './IconRound';
 const VerticalCard = () => {
   return (
     <View style={styles.card}>
-      <View style={{position: 'relative'}}>
+      <View>
         <Image
           source={{
             uri: 'https://s3-alpha-sig.figma.com/img/e48b/46ce/c7c60878cce2c105741b5770cca36c76?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mfGj~i6yi1DwQuaiphNMSGN~QUggyPmfFoUMYur2V3wC9oHWw1BZCeF5n3GZzWkHeZCIM9mGVPOtCkcaBzaqNAbN~59wrwON05nM3qmsD96e2SLUcIPtVNWYr~J9f7JiwSShpR2Z9Btrp1aIktO0tAiJi68o-SMatto4opqzByB0J8V3G8r9Wjj9biHfIqI-9TYN7VKGaPbLlxqynxG8Ngi1aAcY4DvGaSZB4Kecp2BS-UjRX7pVX5dri1BIrfvgfxIxKiuDPeadl~wJKYDO0C~r~61GX8uLedG47eLhiTtTr3J4DHkg-Ig3Mma4Ij-6xYQH72zoPwidxLWi7zxXyw__',
           }}
           style={{width: 130, height: 150}}
         />
-        <Miconi
-          name="heart-outline"
+        <IconRound
+          icon="heart-outline"
           size={25}
           color={colors.primary}
-          style={{position: 'absolute', top: 5, right: 5}}
+          style={{
+            position: 'absolute',
+            top: 5,
+            right: 5,
+            backgroundColor: '#ffffff99',
+          }}
         />
       </View>
       <View

@@ -15,32 +15,40 @@ const Home = ({navigation}) => {
         <View
           style={{
             position: 'absolute',
-            bottom: 0,
-            flexDirection: 'row',
+            bottom: 5,
             width: '100%',
-            padding: 2,
+            flexDirection: 'row',
             justifyContent: 'space-between',
-            backgroundColor: '#aba8a8',
+            alignItems: 'center',
           }}>
-          <Text
-            size="large"
-            style={{
-              fontWeight: 'bold',
-            }}>
-            Shop Name
-          </Text>
-          <Text
-            size="large"
-            style={{
-              fontWeight: 'bold',
-            }}>
-            Shop ID- SP001
-          </Text>
+          <View style={{gap: 5}}>
+            <Text
+              size="large"
+              style={{
+                backgroundColor: '#ffffffcb',
+                borderTopRightRadius: 10,
+                paddingHorizontal: 5,
+                borderBottomRightRadius: 10,
+              }}>
+              Shop Name
+            </Text>
+            <Text
+              size="medium"
+              style={{
+                backgroundColor: '#ffffffcb',
+                borderTopRightRadius: 10,
+                paddingHorizontal: 5,
+                borderBottomRightRadius: 10,
+              }}>
+              Shop ID: SP001
+            </Text>
+          </View>
         </View>
       </View>
       <View style={{margin: 10, flex: 1}}>
         <Button
           title="Add Jober"
+          icon="plus-circle"
           onPress={() => {
             navigation.navigate('AddJober');
           }}

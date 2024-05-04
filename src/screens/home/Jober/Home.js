@@ -13,26 +13,41 @@ const Home = ({navigation}) => {
           }}
           style={{width: '100%', height: 200}}
         />
-        <Text
-          size="medium"
-          style={{position: 'absolute', bottom: 5, right: 5, color: 'white'}}>
-          Shop ID- SP001
-        </Text>
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 5,
+            width: '100%',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}>
+          <View style={{gap: 5}}>
+            <Text
+              size="large"
+              style={{
+                backgroundColor: '#ffffffc8',
+                borderTopRightRadius: 10,
+                paddingHorizontal: 5,
+                borderBottomRightRadius: 10,
+              }}>
+              Shop Name
+            </Text>
+            <Text
+              size="medium"
+              style={{
+                backgroundColor: '#ffffffc8',
+                borderTopRightRadius: 10,
+                paddingHorizontal: 5,
+                borderBottomRightRadius: 10,
+              }}>
+              Shop ID: SP001
+            </Text>
+          </View>
+        </View>
       </View>
       <View
-        style={{
-          backgroundColor: '#aba8a8',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          padding: 10,
-        }}>
-        <View style={{backgroundColor: '#6262ef'}}>
-          <Text size="medium">Shop</Text>
-        </View>
-        <View style={{backgroundColor: '#6f6fea'}}>
-          <Text size="medium">Shop</Text>
-        </View>
-      </View>
+        style={{width: '100%', height: 80, backgroundColor: '#b3b3b3'}}></View>
       <View
         style={{
           flexDirection: 'row',

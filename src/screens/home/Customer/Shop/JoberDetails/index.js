@@ -6,19 +6,34 @@ import colors from '../../../../../utils/Theme';
 import TopNavigation from '../../../../../navigations/TopNavigation';
 import AllBookings from './AllBookings';
 import Profile from './Profile';
-const Index = () => {
+import IconRound from '../../../../../components/UI/IconRound';
+const Index = ({navigation}) => {
   const tabs = [
     {
       name: 'All Bookings',
-      component: AllBookings,
+      component: <AllBookings />,
     },
     {
       name: 'Profile',
-      component: Profile,
+      component: <Profile />,
     },
   ];
   return (
     <Layout>
+      <IconRound
+        onPress={() => navigation.goBack()}
+        icon="arrow-left"
+        color="black"
+        style={{
+          position: 'absolute',
+          left: 10,
+          top: 10,
+          zIndex: 1,
+          backgroundColor: '#ffffff',
+          borderWidth: 1,
+          borderColor: '#bababa',
+        }}
+      />
       <View style={{alignItems: 'center', gap: 5, marginBottom: 10}}>
         <Image
           source={{uri: 'https://picsum.photos/536/354'}}

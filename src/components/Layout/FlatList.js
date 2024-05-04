@@ -11,10 +11,11 @@ const FlatListComponent = ({horizontal = false, Comp, name}) => {
       )}
 
       <FlatList
-        data={[1, 2, 3]}
+        data={[1, 2, 3, 4, 5, 6]}
         renderItem={({item}) => Comp}
         keyExtractor={(item, i) => i}
         horizontal={horizontal}
+        // numColumns={2}
         showsHorizontalScrollIndicator={false}
       />
     </View>

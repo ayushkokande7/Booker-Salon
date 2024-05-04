@@ -19,10 +19,19 @@ const JoberCard = () => {
         elevation: 3,
       }}>
       <View style={{flexDirection: 'row', alignItems: 'center', gap: 10}}>
-        <Image
-          source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
-          style={{width: 60, height: 60, borderRadius: 50}}
-        />
+        <View>
+          <Image
+            source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
+            style={{width: 60, height: 60, borderRadius: 50}}
+          />
+          <Micon
+            name="check-decagram"
+            size={25}
+            color={colors.primary}
+            style={{position: 'absolute', top: -5, right: -5}}
+          />
+        </View>
+
         <View>
           <Text size="large">Ankit Kumar</Text>
           <Text size="medium">Job ID: SP001</Text>

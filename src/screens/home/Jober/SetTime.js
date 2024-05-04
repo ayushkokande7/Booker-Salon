@@ -53,15 +53,41 @@ const SetTime = () => {
           Ankit
         </Text>
       </View>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <View style={{backgroundColor: '#98f072', padding: 10}}>
-          <Text size="large">Hours</Text>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          gap: 15,
+        }}>
+        <View
+          style={{
+            backgroundColor: '#98f072',
+            paddingVertical: 20,
+            borderRadius: 40,
+            flex: 1,
+            alignItems: 'center',
+          }}>
+          <View
+            style={{
+              backgroundColor: '#eb2c2c',
+              padding: 10,
+              position: 'absolute',
+              top: 0,
+              right: 0,
+            }}>
+            <Text size="large">Hours</Text>
+          </View>
           <TouchableOpacity
             onPress={() => increaseTime('hour', true)}
-            style={{backgroundColor: '#3a5cf4', padding: 10, borderRadius: 10}}>
+            style={{
+              backgroundColor: '#3a5cf4',
+              padding: 10,
+              paddingHorizontal: 20,
+              borderRadius: 10,
+            }}>
             <Micon name="plus-thick" size={30} color="white" />
             <Text size="large" style={{color: 'white'}}>
-              1 hr
+              1 Hr
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -70,15 +96,16 @@ const SetTime = () => {
               backgroundColor: '#3a5cf4',
               padding: 10,
               borderRadius: 10,
+              paddingHorizontal: 20,
               marginTop: 10,
             }}>
             <Micon name="minus-thick" size={30} color="white" />
             <Text size="large" style={{color: 'white'}}>
-              1 hr
+              1 Hr
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={{backgroundColor: '#98f072', padding: 10}}>
+        <View style={{backgroundColor: '#98f072', padding: 10, flex: 1}}>
           <Text size="large">Minutes</Text>
           <TouchableOpacity
             onPress={() => increaseTime('minute', true)}
@@ -102,7 +129,7 @@ const SetTime = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={{backgroundColor: '#98f072', padding: 10}}>
+        <View style={{backgroundColor: '#98f072', padding: 10, flex: 1}}>
           <View style={{backgroundColor: '#3a5cf4', width: 100}}>
             <View
               style={{flexDirection: 'row', justifyContent: 'space-around'}}>
