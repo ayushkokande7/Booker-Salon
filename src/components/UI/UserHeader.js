@@ -1,9 +1,7 @@
-import {View, Image} from 'react-native';
-import React from 'react';
+import {View, Image, TouchableOpacity} from 'react-native';
 import {Text} from '../inputs';
-import Micon from 'react-native-vector-icons/MaterialIcons';
+import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../utils/Theme';
-import IconRound from './IconRound';
 const UserHeader = () => {
   return (
     <View
@@ -39,14 +37,32 @@ const UserHeader = () => {
               alignItems: 'center',
               marginLeft: -5,
             }}>
-            <Micon name="location-pin" size={20} color={colors.iconFocus} />
+            <Micon name="map-marker" size={23} color={colors.iconFocus} />
             <Text size="medium" noOfLine={1}>
               Rz 45/333, new delhi
             </Text>
           </View>
         </View>
       </View>
-      <IconRound icon="bell" size={25} />
+      <TouchableOpacity
+        style={{
+          padding: 8,
+          borderColor: '#626262',
+          borderWidth: 1,
+          borderRadius: 50,
+        }}>
+        <Micon name="bell-badge-outline" size={28} />
+        <View
+          style={{
+            position: 'absolute',
+            top: 10,
+            right: 10,
+            padding: 5,
+            backgroundColor: 'red',
+            borderRadius: 50,
+          }}
+        />
+      </TouchableOpacity>
     </View>
   );
 };

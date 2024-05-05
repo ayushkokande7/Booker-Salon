@@ -4,7 +4,9 @@ import {UserHeader, HeroSection} from '../../../components/UI';
 import FlatList from '../../../components/Layout/FlatList';
 import Categories from '../../../components/Layout/Categories';
 import {HorzontalCard, VerticalCard} from '../../../components/UI';
+// import {requestUserPermission} from '../../../utils/NotificationService';
 const Home = () => {
+  // requestUserPermission();
   return (
     <Layout>
       <UserHeader />

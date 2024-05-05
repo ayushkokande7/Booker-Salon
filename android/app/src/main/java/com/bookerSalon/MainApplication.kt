@@ -1,4 +1,4 @@
-package com.booker
+package com.bookerSalon
 
 import android.app.Application
 import com.facebook.react.PackageList

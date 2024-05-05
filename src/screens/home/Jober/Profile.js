@@ -47,13 +47,6 @@ const Profile = ({navigation}) => {
           color="#0762E9"
           onPress={() => navigation.navigate('EditProfile')}
         />
-
-        <ProfileCard
-          icon="content-cut"
-          title="Add Services"
-          color="#5fadf2"
-          onPress={() => navigation.navigate('Service')}
-        />
         <ProfileCard
           icon="shield-alert"
           title="Privacy Policy"

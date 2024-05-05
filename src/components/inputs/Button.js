@@ -1,17 +1,26 @@
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
-const Button = ({title, onPress, style, icon}) => {
+import colors from '../../utils/Theme';
+const Button = ({mode = 'container', title, onPress, style, icon}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[mode === 'outline' ? styles.outline : styles.button, style]}>
       {icon && <Micon name={icon} size={30} color="white" />}
-      <Text style={styles.text}>{title}</Text>
+      <Text
+        style={[
+          styles.text,
+          {color: mode === 'outline' ? colors.primary : 'white'},
+        ]}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#2E7EF6',
+    backgroundColor: colors.primary,
     padding: 15,
     alignItems: 'center',
     borderRadius: 50,
@@ -20,9 +29,15 @@ const styles = StyleSheet.create({
     gap: 10,
     justifyContent: 'center',
   },
+  outline: {
+    borderWidth: 1,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: colors.primary,
+    borderRadius: 50,
+  },
   text: {
-    color: 'white',
-    fontWeight: 'bold',
     fontSize: 20,
   },
 });

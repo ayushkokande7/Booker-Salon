@@ -135,7 +135,6 @@ const Index = ({navigation}) => {
             <Text size="medium">View All</Text>
           </View>
           <Services />
-          <View></View>
         </View>
       </View>
       <TopNavigation tabs={tabs} />

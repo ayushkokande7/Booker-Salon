@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {hideAlert} from '../../redux/slices/alertSlice';
 import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
+import colors from '../../utils/Theme';
 const Alert = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -48,18 +49,37 @@ const Alert = () => {
             padding: 15,
             borderRadius: 25,
             margin: 15,
+            paddingHorizontal: 30,
             justifyContent: 'center',
           }}>
           <Micon
             name={seticon}
-            size={80}
-            color="#0762E9"
+            size={90}
+            color={icon == 'info' ? colors.primary : colors.iconFocus}
             style={{alignSelf: 'center'}}
           />
-          <Text style={{fontWeight: 'bold', fontSize: 25, textAlign: 'center'}}>
+          <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              fontWeight: 'bold',
+            }}>
             {title}
           </Text>
-          <Text size="large" style={{marginVertical: 25, textAlign: 'center'}}>
+          {icon == 'info' ? null : (
+            <Text
+              size="large"
+              style={{
+                alignSelf: 'center',
+                color: '#525252',
+                marginVertical: 10,
+              }}>
+              For Your Booking
+            </Text>
+          )}
+          <Text
+            size="large"
+            style={{marginVertical: 10, marginBottom: 30, textAlign: 'center'}}>
             {message}
           </Text>
           {icon == 'info' ? (
@@ -76,7 +96,9 @@ const Alert = () => {
               <TouchableOpacity
                 onPress={() => handleNavigate(1)}
                 style={{marginBottom: 20, marginTop: 10}}>
-                <Text size="large" style={{textAlign: 'center'}}>
+                <Text
+                  size="large"
+                  style={{textAlign: 'center', color: colors.primary}}>
                   Back to Home
                 </Text>
               </TouchableOpacity>

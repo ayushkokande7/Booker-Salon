@@ -2,8 +2,10 @@ import {View, Image} from 'react-native';
 import {Layout} from '../../../../components/UI';
 import {Text} from '../../../../components/inputs';
 import ProfileCard from '../../../../components/UI/ProfileCard';
-
+import {useDispatch} from 'react-redux';
+import {showAlert} from '../../../../redux/slices/alertSlice';
 const Index = ({navigation}) => {
+  const dispatch = useDispatch();
   return (
     <Layout>
       <View
@@ -48,7 +50,19 @@ const Index = ({navigation}) => {
           color="#5fadf2"
           onPress={() => navigation.navigate('JoberBookings')}
         />
-        <ProfileCard icon="delete" title="Delete Jober" color="#f43b41" />
+        <ProfileCard
+          icon="delete"
+          title="Delete Jober"
+          color="#f43b41"
+          onPress={() => {
+            dispatch(
+              showAlert({
+                message: 'Are you sure you want to delete this jober?',
+                event: () => {},
+              }),
+            );
+          }}
+        />
       </View>
     </Layout>
   );

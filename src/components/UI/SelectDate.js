@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {FlatList, TouchableOpacity, StyleSheet, View} from 'react-native';
 import {Button, Text} from '../inputs';
 import DatePicker from 'react-native-date-picker';
+import colors from '../../utils/Theme';
 const SelectDate = () => {
   const startDate = new Date();
   const dates = Array.from(
@@ -39,7 +40,14 @@ const SelectDate = () => {
           </View>
         </View>
       </View>
-      <Button title="Book Now" style={{marginHorizontal: 10}} />
+      <Button
+        title="Book Now"
+        style={{
+          marginHorizontal: 10,
+          paddingVertical: 20,
+          borderRadius: 15,
+        }}
+      />
     </View>
   );
 };
@@ -102,7 +110,7 @@ const DateSelection = ({dates, selectedDate, onDateSelect}) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    backgroundColor: '#2E7EF6',
+    backgroundColor: colors.primary,
     paddingVertical: 20,
     borderTopEndRadius: 25,
     borderTopStartRadius: 25,

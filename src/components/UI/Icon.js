@@ -8,7 +8,7 @@ const Icon = ({data}) => {
       onPress={() => navigation.navigate('Nearby')}
       style={{
         alignItems: 'center',
-        width: 100,
+        width: 110,
       }}>
       <View
         style={{

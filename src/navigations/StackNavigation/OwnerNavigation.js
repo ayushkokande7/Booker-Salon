@@ -21,7 +21,7 @@ const OwnerNavigation = () => {
     },
     {
       icon: 'calculator',
-      label: 'calc',
+      label: 'calculate',
       component: Calculation,
     },
     {

@@ -18,7 +18,7 @@ const Booking = () => {
         <TouchableOpacity
           onPress={() => setBooking(0)}
           style={{
-            flex: 1,
+            flex: 0.5,
             height: '100%',
             alignItems: 'center',
             justifyContent: 'center',
@@ -61,6 +61,21 @@ const Booking = () => {
           }}>
           <Text size="large" style={{color: 'white'}}>
             Completed
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => setBooking(3)}
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            height: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderBottomWidth: 5,
+            borderColor: booking === 3 ? 'white' : '#ffffff00',
+          }}>
+          <Text size="large" style={{color: 'white'}}>
+            Cancelled
           </Text>
         </TouchableOpacity>
       </View>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "977751148838",
+    "project_id": "bookersalon",
+    "storage_bucket": "bookersalon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977751148838:android:783c329c9bddba6a0799e7",
+        "android_client_info": {
+          "package_name": "com.bookerSalon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz2ICx2eRwQfRPRqUNp6yvIzRbphivGN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

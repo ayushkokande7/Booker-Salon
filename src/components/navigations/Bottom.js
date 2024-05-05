@@ -94,7 +94,7 @@ const TabBarComponent = ({active, options, onLayout, onPress}) => {
       <Animated.View
         style={[
           styles.iconContainer,
-          active && {top: -20},
+          active && {top: -15},
           animatedIconContainerStyles,
         ]}>
         {options.tabBarIcon({focused: active})}
@@ -125,10 +125,10 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: colors.primary,
     position: 'absolute',
-    top: -9,
+    top: -7,
     left: 0,
     right: 0,
-    bottom: 7,
+    bottom: 5,
   },
   iconContainer: {
     position: 'absolute',

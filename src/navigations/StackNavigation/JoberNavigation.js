@@ -13,7 +13,7 @@ const JoberNavigation = () => {
     },
     {
       icon: 'calculator',
-      label: 'calc',
+      label: 'calculate',
       component: Calculation,
     },
     {

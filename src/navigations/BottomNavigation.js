@@ -32,16 +32,7 @@ const BottomNavigation = ({route}) => {
         headerShown: false,
         tabBarHideOnKeyboard: true,
       }}
-      tabBar={props => (
-        // <BottomFabBar
-        //   mode="default"
-        //   focusedButtonStyle={{
-        //     backgroundColor: colors.primary,
-        //   }}
-        //   {...props}
-        // />
-        <Bottom {...props} keyboardVisible={keyboardVisible} />
-      )}>
+      tabBar={props => <Bottom {...props} keyboardVisible={keyboardVisible} />}>
       {Tabs?.map((item, i) => (
         <Tab.Screen
           key={i}

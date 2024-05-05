@@ -24,16 +24,18 @@ const ScheduleBooking = ({navigation}) => {
         }}
       />
       <View style={{alignItems: 'center', marginTop: 50}}>
-        <Text size="large">One Click and Book Now!</Text>
+        <Text size="large" style={{color: '#666666'}}>
+          One Click and Book Now!
+        </Text>
         <Button
           title="Instant Book"
           icon="wifi"
           onPress={() => {
             dis(
               showAlert({
-                title: 'Thank You! \n For Your Booking',
+                title: 'Thank you!',
                 message:
-                  'Booking Confirmed! Get ready for an \n unforgettable experience. \n See you soon!',
+                  'Booking Confirmed! Get ready for an unforgettable experience. \n See you soon!',
                 icon: 'check-circle-outline',
               }),
             );
@@ -42,11 +44,14 @@ const ScheduleBooking = ({navigation}) => {
             marginVertical: 10,
             borderRadius: 15,
             padding: 10,
+            paddingHorizontal: 20,
             marginBottom: 20,
           }}
         />
         <Text size="large">Book on Your Schedule</Text>
-        <Text size="medium">Select Date & Time</Text>
+        <Text size="medium" style={{color: '#666666'}}>
+          Select Date & Time
+        </Text>
       </View>
       <SelectDate />
     </Layout>

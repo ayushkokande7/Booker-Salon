@@ -3,6 +3,7 @@ import {Layout} from '../../../../components/UI';
 import PricingCard from '../../../../components/UI/PricingCard';
 import IconRound from '../../../../components/UI/IconRound';
 import Text from '../../../../components/inputs/Text';
+import colors from '../../../../utils/Theme';
 const Service = ({navigation}) => {
   return (
     <Layout padding>
@@ -36,12 +37,13 @@ const Service = ({navigation}) => {
       />
       <IconRound
         icon="plus"
+        size={38}
         onPress={() => navigation.navigate('AddService')}
         style={{
           position: 'absolute',
           right: 10,
           bottom: 10,
-          backgroundColor: '#0b0bb2',
+          backgroundColor: colors.primary,
         }}
       />
     </Layout>

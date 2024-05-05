@@ -3,6 +3,7 @@ import {useNavigation} from '@react-navigation/native';
 import {Button, Text} from '../inputs';
 import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../utils/Theme';
+import SwitchToggle from 'react-native-switch-toggle';
 const JoberCard = () => {
   const navigation = useNavigation();
   return (
@@ -51,7 +52,13 @@ const JoberCard = () => {
           </View>
         </View>
       </View>
-      <Button title="Book Now" style={{padding: 8}} />
+      <View>
+        <Text size="medium" style={{color: 'gray'}}>
+          Booking Status
+        </Text>
+        <SwitchToggle switchOn={false} onPress={() => {}} />
+        <Button mode="outline" title="Book Now" />
+      </View>
     </TouchableOpacity>
   );
 };

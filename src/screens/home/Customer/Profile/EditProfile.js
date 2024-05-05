@@ -8,7 +8,7 @@ const EditProfile = () => {
   const [img, setImg] = useState('https://reactnative.dev/img/tiny_logo.png');
   const handleImage = () => {
     launchImageLibrary({mediaType: 'photo'}, response => {
-      setImg(response.assets[0].uri);
+      if (!response.didCancel) setImg(response?.assets[0]?.uri);
     });
   };
   return (

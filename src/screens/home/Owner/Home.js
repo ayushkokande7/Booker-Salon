@@ -1,7 +1,8 @@
 import {Image, View, TouchableOpacity} from 'react-native';
 import {Layout} from '../../../components/UI';
 import {Button, Text} from '../../../components/inputs';
-
+import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
+import colors from '../../../utils/Theme';
 const Home = ({navigation}) => {
   return (
     <Layout>
@@ -55,27 +56,39 @@ const Home = ({navigation}) => {
         />
         <View
           style={{
-            backgroundColor: '#aba8a8',
+            backgroundColor: '#2E7EF6',
+            padding: 5,
+            borderRadius: 50,
+            paddingHorizontal: 20,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+          <Text size="small" style={{color: 'white'}}>
+            Image
+          </Text>
+          <Text size="small" style={{color: 'white'}}>
+            Name
+          </Text>
+          <Text size="small" style={{color: 'white'}}>
+            Today Booking
+          </Text>
+          <Text size="small" style={{color: 'white'}}>
+            Compete
+          </Text>
+          <Text size="small" style={{color: 'white'}}>
+            Live
+          </Text>
+        </View>
+        <View
+          style={{
+            backgroundColor: '#f0f0f0',
+            elevation: 15,
             flex: 1,
             padding: 10,
             borderTopLeftRadius: 30,
             borderTopRightRadius: 30,
           }}>
-          <View
-            style={{
-              backgroundColor: '#ef6d03',
-              padding: 5,
-              borderRadius: 50,
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-            }}>
-            <Text size="medium">Image</Text>
-            <Text size="medium">Name</Text>
-            <Text size="medium">Today Booking</Text>
-            <Text size="medium">Compete</Text>
-            <Text size="medium">Live</Text>
-          </View>
           <TouchableOpacity
             onPress={() => navigation.navigate('Jober')}
             style={{
@@ -83,28 +96,49 @@ const Home = ({navigation}) => {
               alignItems: 'center',
               gap: 5,
               marginVertical: 5,
-              backgroundColor: '#d74cfa',
+              backgroundColor: '#3DCEB8',
               padding: 5,
+              elevation: 10,
               borderRadius: 50,
             }}>
-            <Image
-              source={{uri: 'https://picsum.photos/536/354'}}
-              style={{width: 60, height: 60, borderRadius: 50}}
-            />
+            <View>
+              <Image
+                source={{uri: 'https://picsum.photos/536/354'}}
+                style={{width: 60, height: 60, borderRadius: 50}}
+              />
+              <Micon
+                name="check-decagram"
+                size={20}
+                color={colors.primary}
+                style={{position: 'absolute', top: 0, right: 0}}
+              />
+            </View>
             <View
               style={{
                 flex: 1,
-                backgroundColor: '#95ea50',
+                // backgroundColor: '#4bebd3ff',
                 flexDirection: 'row',
                 alignItems: 'center',
                 padding: 12,
                 borderRadius: 20,
                 justifyContent: 'space-between',
+                shadowColor: '#000',
+
+                elevation: 20,
               }}>
               <Text size="medium">ankit</Text>
               <Text size="medium">12</Text>
               <Text size="medium">5</Text>
-              <Text size="medium">7</Text>
+              <Text
+                size="medium"
+                style={{
+                  backgroundColor: colors.iconFocus,
+                  padding: 3,
+                  paddingHorizontal: 5,
+                  borderRadius: 50,
+                }}>
+                1
+              </Text>
             </View>
           </TouchableOpacity>
         </View>

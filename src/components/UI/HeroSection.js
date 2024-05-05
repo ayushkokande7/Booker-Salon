@@ -53,7 +53,7 @@ const HeroSection = () => {
           renderItem={({item}) => (
             <Image
               source={{
-                uri: 'https://s3-alpha-sig.figma.com/img/f49a/d6c4/c3bcdc9d2f58f70c2078c82684db76c6?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aAtf02X-6PKjMChvPG5B-7Sy46j2kVoSKUmgrTlZad~et8RF0koTGzxotdH5QOsA-PsxHKNb4XWT~8b-dTER8v65nT4LwJ7bjJfbzfkXyGiu9hLXBrabR535rC5~l1jtMOJY0X2JpFttuItRvXwVxqkBwdKmaI~jDoXm9CD8vJROwv8KQu6H9I-nfZv~MKTI8ylMIj17Rpf1YJfeyjoOb2lj6PWRG~m3KS6F0GczYbcFnCYc0PleEtrjY8iJAic-RFeM8X1qO8f6uWn~GiDHc2Z6dAOapC3a9YFPauFB8kU3OWq8-i1-hdOQxQO0sAkLLyjGNbKZR6LA~f9DwGS4lg__',
+                uri: 'https://s3-alpha-sig.figma.com/img/bb1d/ba88/4e2d6d9c201e5eb1e1f13dad437382c2?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IJundy4Up68EqyvUWggp1Vj4-G4cQc03CSN7LR3pMQeqVwgfITpeXk8I0zEED-qAEMvc8HXP14FB2tqQZUvcmhhrxojkXPb-D~CMnUy20r-Rd7kYYFy005eZtRMgQmG5xgXQvbV6SjTVP41oMTEmbwIcSl0qxOzXfXxXgCA78zDUYnjvbBeCzeXYIQDysBWJijGLWpmZWPM64vCU2Bgn3k4ETeqIIHtgbKGQjSE8Ah~sPKAKm3CYBCEBOyP1oIAaMqyGcsposYTm4wFa3yV0qAX7OY6VHTFXunC4QnSaNx0TpbILrZm6vEpMWoCDU55YHkTLU782Fpa6MU81XMPHBQ__',
               }}
               style={{
                 height: '100%',

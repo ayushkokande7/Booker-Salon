@@ -1,7 +1,7 @@
 import {TouchableOpacity} from 'react-native';
 import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const IconRound = ({onPress, icon, size = 30, color = '#ffffff', style}) => {
+const IconRound = ({onPress, icon, size = 28, color = '#ffffff', style}) => {
   return (
     <TouchableOpacity
       onPress={onPress}

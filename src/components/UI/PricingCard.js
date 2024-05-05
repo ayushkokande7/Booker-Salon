@@ -12,7 +12,7 @@ const PricingCard = ({onPress}) => {
         justifyContent: 'space-between',
         padding: 10,
         backgroundColor: '#ffffff',
-        elevation: 3,
+        elevation: 15,
         borderRadius: 10,
         marginVertical: 10,
       }}>

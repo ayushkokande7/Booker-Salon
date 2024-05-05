@@ -1,6 +1,5 @@
 import {View} from 'react-native';
 import {Text} from '../inputs';
-import {isDraft} from '@reduxjs/toolkit';
 const Services = () => {
   const data = [
     {
@@ -34,7 +33,6 @@ const Services = () => {
         flexDirection: 'row',
         flexWrap: 'wrap',
         gap: 7,
-        justifyContent: 'flex-end',
         marginVertical: 10,
       }}>
       {data.map(item => {

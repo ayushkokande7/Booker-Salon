@@ -15,7 +15,7 @@ const HorzontalCard = ({size = 75}) => {
       onPress={() => navigation.navigate('Shop')}>
       <Image
         source={{
-          uri: 'https://s3-alpha-sig.figma.com/img/e48b/46ce/c7c60878cce2c105741b5770cca36c76?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mfGj~i6yi1DwQuaiphNMSGN~QUggyPmfFoUMYur2V3wC9oHWw1BZCeF5n3GZzWkHeZCIM9mGVPOtCkcaBzaqNAbN~59wrwON05nM3qmsD96e2SLUcIPtVNWYr~J9f7JiwSShpR2Z9Btrp1aIktO0tAiJi68o-SMatto4opqzByB0J8V3G8r9Wjj9biHfIqI-9TYN7VKGaPbLlxqynxG8Ngi1aAcY4DvGaSZB4Kecp2BS-UjRX7pVX5dri1BIrfvgfxIxKiuDPeadl~wJKYDO0C~r~61GX8uLedG47eLhiTtTr3J4DHkg-Ig3Mma4Ij-6xYQH72zoPwidxLWi7zxXyw__',
+          uri: 'https://s3-alpha-sig.figma.com/img/4203/6cf7/0ff3d3efe7d9c8c10d20a33b953f0d75?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LTPEh127OSvkfKRFnyYhztrTM~80xG8zfH9Ga6Eq57ahRV~1UBQobebFO93SxcflEH5nA1EwUiy7ZGtQadNCnpS5YHUVo6BIF-V6zb0A6d1XHs~1rktgfTFaJ3w2fvN58XXxg4g1keNJqiB6xbJgnYD6hpwXlW3ZjLr8XP5Mo8o6YR9McfFXsp8okYGEHWsy~Da3HaNkmTcuR7cosv~Pe81vLKI4oFAuZSPIWFICbJCyLmW2TLXI6igoQ-KB15O1hZU21TL4sH~3PHfjsOmoncaAer1~osRrh16YQwhuFTvI~VEsqDUsxoiqZDt-B2hJKfiYuXlJoNH0T3fDvlXWdw__',
         }}
         style={{width: '100%', height: 150}}
       />
