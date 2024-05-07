@@ -69,7 +69,7 @@ const Profile = ({navigation}) => {
           icon="bell"
           title="Get Notification"
           color="#D1CB0D"
-          onPress={() => navigation.navigate('GetNotification')}
+          onPress={() => navigation.navigate('Notification')}
         />
         <ProfileCard
           icon="shield-alert"

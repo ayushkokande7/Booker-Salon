@@ -1,13 +1,18 @@
 import SwitchToggle from 'react-native-switch-toggle';
-const Switch = () => {
+import {useState} from 'react';
+const Switch = ({value}) => {
+  const [switchOn, setSwitchOn] = useState(value);
   return (
     <SwitchToggle
-      switchOn={false}
-      onPress={() => {}}
+      switchOn={switchOn}
+      onPress={() => {
+        setSwitchOn(!switchOn);
+      }}
+      dis
       circleColorOff="#2b2b2b"
       circleColorOn="#015301"
-      backTextLeft="off"
-      backTextRight="off"
+      backTextLeft={switchOn ? 'ON' : ''}
+      backTextRight={switchOn ? '' : 'OFF'}
       textLeftStyle={{
         color: '#000000',
         fontSize: 15,
@@ -19,7 +24,7 @@ const Switch = () => {
         color: '#000000',
         fontSize: 15,
         position: 'absolute',
-        left: 12,
+        left: 5,
         top: -10,
       }}
       backgroundColorOn="#4afa4d"
@@ -29,6 +34,8 @@ const Switch = () => {
         height: 30,
         borderRadius: 25,
         padding: 5,
+        borderColor: 'black',
+        borderWidth: 1,
       }}
       circleStyle={{
         width: 20,

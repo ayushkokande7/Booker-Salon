@@ -4,6 +4,7 @@ import {Layout} from '../../../components/UI';
 import {Text} from '../../../components/inputs';
 import ShopToogle from '../../../components/UI/ShopToogle';
 import UserCard from '../../../components/UI/UserCard';
+import JoberTab from './JoberTab';
 const Home = ({navigation}) => {
   return (
     <Layout>
@@ -48,7 +49,7 @@ const Home = ({navigation}) => {
         </View>
       </View>
       <ShopToogle />
-      <UserCard />
+      <JoberTab />
     </Layout>
   );
 };

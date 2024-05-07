@@ -2,7 +2,9 @@ import {View, Image, TouchableOpacity} from 'react-native';
 import {Text} from '../inputs';
 import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../utils/Theme';
+import {useNavigation} from '@react-navigation/native';
 const UserHeader = () => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -45,6 +47,9 @@ const UserHeader = () => {
         </View>
       </View>
       <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Notification');
+        }}
         style={{
           padding: 8,
           borderColor: '#626262',

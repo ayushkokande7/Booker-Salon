@@ -1,6 +1,9 @@
 import {View, Image, TouchableOpacity} from 'react-native';
 import {Text} from '../inputs';
+import {useNavigation} from '@react-navigation/native';
+import colors from '../../utils/Theme';
 const UserCard = () => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -12,7 +15,7 @@ const UserCard = () => {
       <Text
         size="large"
         style={{
-          backgroundColor: '#27dd2e',
+          backgroundColor: colors.secondary,
           padding: 10,
           paddingHorizontal: 10,
           borderBottomRightRadius: 50,
@@ -26,7 +29,7 @@ const UserCard = () => {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
-          backgroundColor: '#aba8a8',
+          backgroundColor: colors.secondary,
           borderTopStartRadius: 50,
           borderBottomStartRadius: 50,
         }}>

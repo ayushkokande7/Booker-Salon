@@ -79,7 +79,7 @@ const Booking = () => {
           </Text>
         </TouchableOpacity>
       </View>
-      <FlatListComponent Comp={<VerticalCard />} />
+      <FlatListComponent Comp={<VerticalCard time={true} />} />
     </View>
   );
 };

@@ -1,9 +1,9 @@
 import {View, Image, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {Button, Text} from '../inputs';
+import {Button, Text, Switch} from '../inputs';
 import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../utils/Theme';
-import SwitchToggle from 'react-native-switch-toggle';
+
 const JoberCard = () => {
   const navigation = useNavigation();
   return (
@@ -52,12 +52,14 @@ const JoberCard = () => {
           </View>
         </View>
       </View>
-      <View>
-        <Text size="medium" style={{color: 'gray'}}>
-          Booking Status
-        </Text>
-        <SwitchToggle switchOn={false} onPress={() => {}} />
-        <Button mode="outline" title="Book Now" />
+      <View style={{gap: 15}}>
+        <View style={{alignItems: 'flex-end', gap: 5}}>
+          <Text size="medium" style={{fontWeight: 'bold', color: '#616161'}}>
+            Booking Status
+          </Text>
+          <Switch value={true} />
+        </View>
+        <Button mode="outline" title="Book Now" style={{padding: 5}} />
       </View>
     </TouchableOpacity>
   );

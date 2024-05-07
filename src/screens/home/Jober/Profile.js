@@ -31,7 +31,7 @@ const Profile = ({navigation}) => {
           Ankit Budhori
         </Text>
         <Text size="medium">988998989</Text>
-        <Text size="medium">Shop ID : CM001</Text>
+        <Text size="medium">Job ID : CM001</Text>
       </View>
       <View
         style={{
@@ -45,6 +45,12 @@ const Profile = ({navigation}) => {
           icon="account"
           title="Edit Profile"
           color="#0762E9"
+          onPress={() => navigation.navigate('EditProfile')}
+        />
+        <ProfileCard
+          icon="star"
+          title="Review"
+          color="#f5a926"
           onPress={() => navigation.navigate('EditProfile')}
         />
         <ProfileCard

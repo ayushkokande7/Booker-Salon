@@ -9,9 +9,17 @@ import {useNavigation} from '@react-navigation/native';
 import IconRound from './IconRound';
 const HorzontalCard = ({size = 75}) => {
   const navigation = useNavigation();
+  const card = size === 75 ? true : false;
   return (
     <TouchableOpacity
-      style={[styles.card, {width: windowWidth(size)}]}
+      style={[
+        styles.card,
+        {
+          width: windowWidth(size),
+          marginBottom: card ? 5 : 15,
+          marginHorizontal: card ? 10 : 5,
+        },
+      ]}
       onPress={() => navigation.navigate('Shop')}>
       <Image
         source={{
@@ -33,20 +41,30 @@ const HorzontalCard = ({size = 75}) => {
       <View style={{padding: 10}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
           <View style={{flexDirection: 'row', gap: 3, alignItems: 'center'}}>
-            <Text size="large" style={{fontWeight: 'bold'}}>
+            <Text
+              size={card ? 'large' : 'medium'}
+              style={{fontWeight: card ? 'bold' : 'normal'}}>
               Ankit Kumar
             </Text>
-            <Micon name="verified" size={25} color={colors.primary} />
+            <Micon
+              name="verified"
+              size={card ? 25 : 20}
+              color={colors.primary}
+            />
           </View>
           <View style={{flexDirection: 'row', gap: 3, alignItems: 'center'}}>
-            <Miconi name="arrow-left-right" size={25} color={colors.primary} />
+            <Miconi
+              name="arrow-left-right"
+              size={card ? 25 : 20}
+              color={colors.primary}
+            />
             <Text size="medium">5 Km</Text>
           </View>
         </View>
         <View
           style={{flexDirection: 'row', alignItems: 'center', marginTop: 3}}>
           <Micon name="location-pin" size={23} color={colors.iconFocus} />
-          <Text size="medium" noOfLine={1}>
+          <Text size={card ? 'medium' : 'small'} noOfLine={1}>
             Rz 45/333, new delhi 45/333, new delhi 45/333, new delhi 45/333, new
             delhi 45/333, new delhi 45/333, new delhi
           </Text>
@@ -75,10 +93,8 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: '#ffffff',
     borderRadius: 20,
-    marginHorizontal: 10,
     elevation: 3,
     overflow: 'hidden',
-    marginBottom: 5,
   },
 });
 export default HorzontalCard;

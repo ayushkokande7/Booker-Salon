@@ -8,7 +8,7 @@ import EditProfile from '../../screens/home/Customer/Profile/EditProfile';
 import BookingHistory from '../../screens/home/Customer/Profile/BookingHistory';
 import PaymentMethod from '../../screens/home/Customer/Profile/PaymentMethod';
 import Favorites from '../../screens/home/Customer/Profile/Favorites';
-import GetNotifications from '../../screens/home/Customer/Profile/GetNotifications';
+import Notifications from '../../screens/home/Customer/Profile/Notifications';
 import Support from '../../screens/home/Customer/Profile/Support';
 import Settings from '../../screens/home/Customer/Profile/Settings';
 import AboutUs from '../../screens/home/Customer/Profile/AboutUs';
@@ -78,8 +78,8 @@ const CustomerNavigation = () => {
         options={{title: 'Favorite'}}
       />
       <Stack.Screen
-        name="GetNotification"
-        component={GetNotifications}
+        name="Notification"
+        component={Notifications}
         options={{title: 'Notification'}}
       />
       <Stack.Screen
