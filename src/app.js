@@ -6,6 +6,8 @@ import OwnerNavigation from './navigations/StackNavigation/OwnerNavigation';
 import JoberNavigation from './navigations/StackNavigation/JoberNavigation';
 import {useSelector} from 'react-redux';
 import Alert from './components/Layout/Alert';
+import {useEffect} from 'react';
+import SplashScreen from 'react-native-splash-screen';
 const App = () => {
   const {userType} = useSelector(state => state.initial);
   const renderNavigation = () => {
@@ -22,6 +24,10 @@ const App = () => {
         return <AuthNavigation />;
     }
   };
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <>
       <StatusBar barStyle={'dark-content'} backgroundColor="#ffffffff" />

@@ -1,4 +1,4 @@
-import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity, Text, StyleSheet, View} from 'react-native';
 import Micon from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../../utils/Theme';
 const Button = ({mode = 'container', title, onPress, style, icon}) => {
@@ -7,13 +7,21 @@ const Button = ({mode = 'container', title, onPress, style, icon}) => {
       onPress={onPress}
       style={[mode === 'outline' ? styles.outline : styles.button, style]}>
       {icon && <Micon name={icon} size={30} color="white" />}
-      <Text
-        style={[
-          styles.text,
-          {color: mode === 'outline' ? colors.primary : 'white'},
-        ]}>
-        {title}
-      </Text>
+      <View
+        style={{
+          shadowColor: '#000000',
+          backgroundColor: 'transparent',
+          elevation: 15,
+          alignItems: 'center',
+        }}>
+        <Text
+          style={[
+            styles.text,
+            {color: mode === 'outline' ? colors.primary : 'white'},
+          ]}>
+          {title}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 };

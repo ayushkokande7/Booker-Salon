@@ -1,6 +1,6 @@
 import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {Text} from '../inputs';
+import {Text, Button} from '../inputs';
 import Micon from 'react-native-vector-icons/MaterialIcons';
 import Miconi from 'react-native-vector-icons/MaterialCommunityIcons';
 import {windowWidth} from '../../utils/Dimentions';
@@ -85,6 +85,19 @@ const HorzontalCard = ({size = 75}) => {
           </View>
         </View>
       </View>
+      {card && (
+        <Button
+          title="Book Now"
+          mode="outline"
+          style={{
+            position: 'absolute',
+            bottom: 7,
+            right: 5,
+            padding: 0,
+            paddingHorizontal: 10,
+          }}
+        />
+      )}
     </TouchableOpacity>
   );
 };

@@ -2,13 +2,12 @@ import {View, Image, TouchableOpacity} from 'react-native';
 import {Text} from '../inputs';
 import {useNavigation} from '@react-navigation/native';
 import colors from '../../utils/Theme';
-const UserCard = () => {
+const UserCard = ({idx}) => {
   const navigation = useNavigation();
   return (
     <View
       style={{
         flexDirection: 'row',
-        gap: 5,
         marginVertical: 5,
         alignItems: 'center',
       }}>
@@ -17,11 +16,11 @@ const UserCard = () => {
         style={{
           backgroundColor: colors.secondary,
           padding: 10,
-          paddingHorizontal: 10,
+          paddingHorizontal: 15,
           borderBottomRightRadius: 50,
           borderTopRightRadius: 50,
         }}>
-        1
+        {idx + 1}
       </Text>
       <View
         style={{
@@ -42,15 +41,25 @@ const UserCard = () => {
           }}>
           <Image
             source={{uri: 'https://picsum.photos/536/354'}}
-            style={{width: 60, height: 60, borderRadius: 50}}
+            style={{
+              width: 60,
+              height: 60,
+              borderRadius: 50,
+              borderWidth: 3,
+              borderColor: 'white',
+            }}
           />
           <Text size="large">Ankit</Text>
         </View>
-        <Text size="medium">2:30pm</Text>
+        <Text size="medium" style={{color: colors.primary, fontWeight: 'bold'}}>
+          2:30pm
+        </Text>
         <TouchableOpacity
           onPress={() => navigation.navigate('SetTime')}
           style={{
             padding: 13,
+            borderWidth: 3,
+            borderColor: '#fff',
             backgroundColor: '#00FF01',
             borderTopLeftRadius: 50,
             borderBottomLeftRadius: 50,

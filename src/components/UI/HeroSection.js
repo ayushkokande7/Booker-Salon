@@ -63,6 +63,9 @@ const HeroSection = () => {
               }}
             />
           )}
+          snapToAlignment="center"
+          decelerationRate="normal"
+          snapToInterval={windowWidth(100)}
         />
       </View>
     </View>

@@ -14,9 +14,16 @@ const JoberTab = () => {
             {backgroundColor: active === 0 ? '#CB96A1' : '#FFCED8'},
           ]}
           onPress={() => setActive(0)}>
-          <Text size="large" style={{fontWeight: 'bold'}}>
-            Today
-          </Text>
+          <View
+            style={{
+              shadowColor: '#000000',
+              elevation: 5,
+              alignItems: 'center',
+            }}>
+            <Text size="large" style={{fontWeight: 'bold'}}>
+              Today (5)
+            </Text>
+          </View>
         </TouchableOpacity>
         <TouchableOpacity
           style={[
@@ -24,13 +31,20 @@ const JoberTab = () => {
             {backgroundColor: active === 1 ? '#CB96A1' : '#FFCED8'},
           ]}
           onPress={() => setActive(1)}>
-          <Text size="large" style={{fontWeight: 'bold'}}>
-            Next Day
-          </Text>
+          <View
+            style={{
+              shadowColor: '#000000',
+              elevation: 15,
+              alignItems: 'center',
+            }}>
+            <Text size="large" style={{fontWeight: 'bold'}}>
+              Next Day (4)
+            </Text>
+          </View>
         </TouchableOpacity>
       </View>
       <View>
-        <FlatListComponent Comp={<UserCard />} />
+        <FlatListComponent renderItem={(item, idx) => <UserCard idx={idx} />} />
       </View>
     </>
   );
@@ -39,7 +53,6 @@ const JoberTab = () => {
 const styles = StyleSheet.create({
   tab: {
     flex: 1,
-    alignItems: 'center',
     padding: 10,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,

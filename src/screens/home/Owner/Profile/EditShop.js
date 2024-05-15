@@ -32,8 +32,8 @@ const EditShop = () => {
         <TextInput label="City" />
         <TextInput label="State" />
         <TextInput label="Pin Code" />
+        <Button title="Update Profile" />
       </View>
-      <Button title="Update Profile" />
     </Layout>
   );
 };

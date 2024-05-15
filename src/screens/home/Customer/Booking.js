@@ -79,7 +79,9 @@ const Booking = () => {
           </Text>
         </TouchableOpacity>
       </View>
-      <FlatListComponent Comp={<VerticalCard time={true} />} />
+      <View style={{marginBottom: 110}}>
+        <FlatListComponent renderItem={() => <VerticalCard time={true} />} />
+      </View>
     </View>
   );
 };

@@ -3,7 +3,10 @@ import FlatListComponent from '../../../../components/Layout/FlatList';
 const Nearby = () => {
   return (
     <Layout>
-      <FlatListComponent Comp={<HorzontalCard size={47} />} rows={true} />
+      <FlatListComponent
+        renderItem={() => <HorzontalCard size={47} />}
+        rows={true}
+      />
     </Layout>
   );
 };

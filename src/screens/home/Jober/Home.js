@@ -3,7 +3,6 @@ import React from 'react';
 import {Layout} from '../../../components/UI';
 import {Text} from '../../../components/inputs';
 import ShopToogle from '../../../components/UI/ShopToogle';
-import UserCard from '../../../components/UI/UserCard';
 import JoberTab from './JoberTab';
 const Home = ({navigation}) => {
   return (
@@ -18,7 +17,7 @@ const Home = ({navigation}) => {
         <View
           style={{
             position: 'absolute',
-            bottom: 5,
+            bottom: 10,
             width: '100%',
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -28,7 +27,7 @@ const Home = ({navigation}) => {
             <Text
               size="large"
               style={{
-                backgroundColor: '#ffffffc8',
+                backgroundColor: '#fff',
                 borderTopRightRadius: 10,
                 paddingHorizontal: 5,
                 borderBottomRightRadius: 10,
@@ -38,7 +37,7 @@ const Home = ({navigation}) => {
             <Text
               size="medium"
               style={{
-                backgroundColor: '#ffffffc8',
+                backgroundColor: '#fff',
                 borderTopRightRadius: 10,
                 paddingHorizontal: 5,
                 borderBottomRightRadius: 10,

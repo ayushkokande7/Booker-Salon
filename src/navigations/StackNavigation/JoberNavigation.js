@@ -3,6 +3,7 @@ import BottomNavigation from '../BottomNavigation';
 import {Home, Profile, Calculation} from '../../screens/home/Jober';
 import SetTime from '../../screens/home/Jober/SetTime';
 import EditProfile from '../../screens/home/Owner/Profile/EditProfile';
+import Upload from '../../screens/home/Jober/Profile/Upload';
 const JoberNavigation = () => {
   const Stack = createStackNavigator();
   const Tabs = [
@@ -33,13 +34,14 @@ const JoberNavigation = () => {
       <Stack.Screen
         name="SetTime"
         component={SetTime}
-        options={{title: 'Set Time'}}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="EditProfile"
         component={EditProfile}
         options={{title: 'Edit Profile'}}
       />
+      <Stack.Screen name="Upload" component={Upload} options={{title: ''}} />
     </Stack.Navigator>
   );
 };

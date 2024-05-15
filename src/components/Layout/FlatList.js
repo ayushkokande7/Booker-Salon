@@ -1,7 +1,12 @@
 import {FlatList} from 'react-native';
 import {Text} from '../inputs';
 import {View} from 'react-native';
-const FlatListComponent = ({horizontal = false, Comp, name, rows = false}) => {
+const FlatListComponent = ({
+  horizontal = false,
+  renderItem,
+  name,
+  rows = false,
+}) => {
   return (
     <View style={{marginVertical: 10}}>
       {name && (
@@ -12,7 +17,7 @@ const FlatListComponent = ({horizontal = false, Comp, name, rows = false}) => {
 
       <FlatList
         data={[1, 2, 3, 4, 5, 6]}
-        renderItem={({item}) => Comp}
+        renderItem={({item, index}) => renderItem(item, index)}
         keyExtractor={(item, i) => i}
         horizontal={rows ? false : horizontal}
         numColumns={rows ? 2 : 1}

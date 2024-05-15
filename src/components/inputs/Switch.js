@@ -8,7 +8,6 @@ const Switch = ({value}) => {
       onPress={() => {
         setSwitchOn(!switchOn);
       }}
-      dis
       circleColorOff="#2b2b2b"
       circleColorOn="#015301"
       backTextLeft={switchOn ? 'ON' : ''}

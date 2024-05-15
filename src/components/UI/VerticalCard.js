@@ -45,9 +45,10 @@ const VerticalCard = ({time = false}) => {
               style={{
                 position: 'absolute',
                 top: -2,
-                right: -8,
-                padding: 3,
+                right: -10,
+                padding: 5,
                 // borderRadius: 50,
+                borderBottomLeftRadius: 20,
                 backgroundColor: colors.iconFocus,
               }}>
               <Text size="large">94</Text>
@@ -101,16 +102,32 @@ const VerticalCard = ({time = false}) => {
             <Text size="medium">(34)</Text>
           </View>
         </View>
-        <Button
-          title="Cancel"
-          style={{
-            position: 'absolute',
-            bottom: 2,
-            right: 2,
-            padding: 5,
-            paddingHorizontal: 10,
-          }}
-        />
+
+        {time ? (
+          <Button
+            title="Cancel"
+            mode="outline"
+            style={{
+              position: 'absolute',
+              bottom: 10,
+              right: 0,
+              padding: 3,
+              paddingHorizontal: 10,
+            }}
+          />
+        ) : (
+          <Button
+            title="Book Now"
+            mode="outline"
+            style={{
+              position: 'absolute',
+              bottom: 10,
+              right: 0,
+              padding: 3,
+              paddingHorizontal: 10,
+            }}
+          />
+        )}
       </View>
     </View>
   );

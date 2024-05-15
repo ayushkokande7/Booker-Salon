@@ -1,18 +1,25 @@
-import {TouchableOpacity, View, StyleSheet} from 'react-native';
+import {
+  TouchableOpacity,
+  View,
+  StyleSheet,
+  ImageBackground,
+} from 'react-native';
 import {Text} from '../../components/inputs';
-import {Layout} from '../../components/UI';
 const OnBoarding = ({navigation}) => {
   return (
-    <Layout
+    <ImageBackground
+      source={require('../../assets/images/onBoarding.png')}
+      resizeMode="cover"
       style={{
-        justifyContent: 'center',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        flex: 1,
       }}>
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontSize: 40, fontWeight: 'bold'}}>Booker Salon</Text>
+        <Text style={{fontSize: 40, fontWeight: 'bold', color: 'white'}}>
+          Booker Salon
+        </Text>
       </View>
-      <View style={{justifyContent: 'space-evenly', flex: 1.5}}>
+      <View style={{justifyContent: 'space-evenly', flex: 2}}>
         <View>
           <Text
             size="medium"
@@ -51,7 +58,7 @@ const OnBoarding = ({navigation}) => {
           </Text>
         </TouchableOpacity>
       </View>
-    </Layout>
+    </ImageBackground>
   );
 };
 

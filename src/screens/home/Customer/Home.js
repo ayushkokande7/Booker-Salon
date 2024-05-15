@@ -12,8 +12,12 @@ const Home = () => {
       <UserHeader />
       <HeroSection />
       <Categories />
-      <FlatList name="Nearby Shops" Comp={<HorzontalCard />} horizontal />
-      <FlatList name="Popular Jobers" Comp={<VerticalCard />} />
+      <FlatList
+        name="Nearby Shops"
+        renderItem={() => <HorzontalCard />}
+        horizontal
+      />
+      <FlatList name="Popular Jobers" renderItem={() => <VerticalCard />} />
     </Layout>
   );
 };

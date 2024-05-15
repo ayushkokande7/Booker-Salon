@@ -29,6 +29,7 @@ const Customer = () => {
             style={{
               flexDirection: 'row',
               alignItems: 'flex-end',
+              gap: 5,
             }}>
             <View style={{flex: 1}}>
               <TextInput
@@ -44,6 +45,7 @@ const Customer = () => {
               style={{
                 flexDirection: 'row',
                 alignItems: 'flex-end',
+                gap: 5,
               }}>
               <View style={{flex: 1}}>
                 <TextInput

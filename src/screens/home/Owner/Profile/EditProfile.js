@@ -24,7 +24,6 @@ const EditProfile = () => {
         </View>
         <TextInput label="Owner Name" />
         <TextInput label="Mobile No" />
-        <TextInput label="Email Address" />
         <View style={{flexDirection: 'row', gap: 10}}>
           <View style={{flex: 1}}>
             <TextInput label="Age" />

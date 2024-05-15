@@ -54,6 +54,12 @@ const Profile = ({navigation}) => {
           onPress={() => navigation.navigate('EditProfile')}
         />
         <ProfileCard
+          icon="image-outline"
+          title="Upload Video/Images"
+          color="#4ff526"
+          onPress={() => navigation.navigate('Upload')}
+        />
+        <ProfileCard
           icon="shield-alert"
           title="Privacy Policy"
           color="#FA7B44"

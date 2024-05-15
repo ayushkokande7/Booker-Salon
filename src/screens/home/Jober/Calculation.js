@@ -2,7 +2,7 @@ import {View} from 'react-native';
 import {Layout} from '../../../components/UI';
 import {Button, Text} from '../../../components/inputs';
 
-const TextC = ({label, color}) => {
+export const TextC = ({label, color, tcolor = 'white'}) => {
   return (
     <Text
       size="large"
@@ -10,7 +10,7 @@ const TextC = ({label, color}) => {
         flex: 1,
         padding: 12,
         textAlign: 'center',
-        color: 'white',
+        color: tcolor,
         borderRadius: 50,
         backgroundColor: color,
       }}>
